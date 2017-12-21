@@ -1,4 +1,4 @@
-package PracticeTests.Chapter12;
+package PracticeTests.Chapter12.Question11;
 
     interface Drive {
         int SPEED = 5;

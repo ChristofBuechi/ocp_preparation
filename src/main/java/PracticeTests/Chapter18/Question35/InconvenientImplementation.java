@@ -1,0 +1,22 @@
+package PracticeTests.Chapter18.Question35;
+
+import java.io.Console;
+
+public class InconvenientImplementation {
+    public static void main(String... dontDoThis) throws Exception {
+        Console c = System.console();
+        if(c != null) {
+            c.writer().write('p');
+            c.writer().write('a');
+            c.writer().write('s');
+            c.writer().write('s');
+            c.writer().flush();
+            int i;
+            StringBuilder sb = new StringBuilder();
+            while ((i = c.reader().read()) != 'x') {
+                sb.append((char) i);
+            }
+            c.writer().format("Result: %s", sb.toString());
+        }
+    }
+}
